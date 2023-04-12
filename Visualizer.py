@@ -1,4 +1,5 @@
 import pygame
+from  Thing import wave
 
 # Initialize Pygame
 pygame.init()
@@ -37,11 +38,12 @@ while running:
 
     # Draw objects on the screen (e.g. shapes, images, text)
 
+
     # Update the display
     pygame.display.update()
     
     #Setting FPS
-    clock.tick(100)
+    clock.tick(10)
 
 # Quit Pygame
 pygame.quit()

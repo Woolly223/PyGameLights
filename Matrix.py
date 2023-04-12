@@ -12,10 +12,11 @@ class Matrix:
         print("Mat Initialized!")
 
     def create_matrix(self):
+        light_grey = (200,200,200)
         for row in range(self.height):
             new_row = []
             for col in range(self.width):
-                new_row.append((200,200,200))
+                new_row.append(light_grey)
             self.matrix.append(new_row)
 
     def set_pixel_color(self, pos, color):
@@ -35,3 +36,4 @@ class Matrix:
         row = pos[1]
         circle_center = (10 + col * 640 / 61, 10 + row * 480 / 41)
         pygame.draw.circle(self.screen, self.matrix[row][col], circle_center, 2)
+        
