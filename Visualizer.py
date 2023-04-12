@@ -1,5 +1,4 @@
 import pygame
-from  Thing import wave
 
 # Initialize Pygame
 pygame.init()
@@ -16,6 +15,7 @@ pygame.display.set_caption("My Pygame Window")
 
 # Import Matrix class
 from Matrix import Matrix
+from Wavy import Wave
 
 # Fill the screen with a color (e.g. white)
 screen.fill((255, 255, 255))
@@ -23,8 +23,9 @@ screen.fill((255, 255, 255))
 # Screen Update Speed (FPS)
 clock = pygame.time.Clock()
 
-# Initialize Matrix
+# Initialize Matrix and Programs
 matrix = Matrix()
+wave = Wave()
 
 # Start the main loop
 running = True
@@ -37,13 +38,13 @@ while running:
             running = False
 
     # Draw objects on the screen (e.g. shapes, images, text)
-
+    wave.update()
 
     # Update the display
     pygame.display.update()
     
     #Setting FPS
-    clock.tick(10)
+    clock.tick(60)
 
 # Quit Pygame
 pygame.quit()

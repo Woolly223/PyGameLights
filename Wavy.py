@@ -1,4 +1,3 @@
-
 class Wave:
     def __init__(self):
         from Visualizer import matrix
@@ -7,15 +6,17 @@ class Wave:
         self.direction = "Right"
 
     def update(self):
+        
+        col = self.cur_x
 
         # Draw a line of Pixels
-        for row in self.matrix.height:
+        for row in range(40):
             light_grey = (200,200,200)
             blue = (0,0,255)
-            pos = (self.cur_x, row)
+            pos = (col, row)
 
             # Check the color of the pixel at pos and return the opposite.
-            if self.matrix.matrix[self.cur_x][row] == light_grey:
+            if self.matrix.matrix[row][self.cur_x] == light_grey:
                 color = blue
             else:
                 color = light_grey
