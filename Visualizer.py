@@ -27,6 +27,8 @@ matrix = Matrix()
 
 # Start the main loop
 running = True
+matrix.draw_whole_matrix()
+
 while running:
     # Handle events (e.g. quit button pressed)
     for event in pygame.event.get():
@@ -34,13 +36,12 @@ while running:
             running = False
 
     # Draw objects on the screen (e.g. shapes, images, text)
-    matrix.draw_whole_matrix()
 
     # Update the display
     pygame.display.update()
     
     #Setting FPS
-    clock.tick(60)
+    clock.tick(100)
 
 # Quit Pygame
 pygame.quit()
