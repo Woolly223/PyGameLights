@@ -9,7 +9,6 @@ class Matrix:
         self.matrix = []
         self.screen = screen
         self.create_matrix()
-        print("Mat Initialized!")
 
     def create_matrix(self):
         light_grey = (200,200,200)
@@ -27,7 +26,6 @@ class Matrix:
     def draw_whole_matrix(self):
         for row in range(self.height):
             for col in range(self.width):
-                print(f"({col},{row})")
                 circle_center = (10 + col * 640 / 61, 10 + row * 480 / 41)
                 pygame.draw.circle(self.screen, self.matrix[row][col], circle_center, 2)
 
